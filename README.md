@@ -26,7 +26,7 @@ Install WinRAR and then install your key:
 `-KeyPath` can be a local file path or a private HTTPS URL.
 
 ```powershell
-.\free-rar.ps1 license -KeyPath "https://example.com/rarreg.key"
+.\free-rar.ps1 license -KeyPath "https://github.com/911218sky/free-rar/releases/download/v0.1.0/rarreg.key"
 ```
 
 ## Remote usage after publishing to GitHub
@@ -35,7 +35,7 @@ Install WinRAR and deploy your own legitimate key directly from GitHub Raw:
 
 ```powershell
 $script = [scriptblock]::Create((irm "https://raw.githubusercontent.com/911218sky/free-rar/main/free-rar.ps1"))
-& $script all -KeyPath "https://example.com/rarreg.key"
+& $script all -KeyPath "https://github.com/911218sky/free-rar/releases/download/v0.1.0/rarreg.key"
 ```
 
 Install WinRAR from GitHub Raw:
@@ -56,5 +56,5 @@ Deploy your own legitimate key from a private HTTPS URL:
 
 ```powershell
 $script = [scriptblock]::Create((irm "https://raw.githubusercontent.com/911218sky/free-rar/main/free-rar.ps1"))
-& $script license -KeyPath "https://example.com/rarreg.key" -Force
+& $script license -KeyPath "https://github.com/911218sky/free-rar/releases/download/v0.1.0/rarreg.key" -Force
 ```
